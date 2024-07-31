@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "Name": "Phong thiet ke",
+    "Description": "chuyen thiet ke ban ve cho dev",
+    "DirectorId": "nguyen van cong"
+  },
+  {
+    "id": 2,
+    "Name": "Phong mkt",
+    "Description": "chuyen vien tu van khach hang",
+    "DirectorId": "nguyen van cong"
+  }
+]

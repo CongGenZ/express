@@ -42,7 +42,7 @@ app.post('/post/:id',(req,res)=>{
             content: content,
             author: author
           },
-          message: "User created successfully"
+          message: "Post created successfully"
         };
       
         res.json(post);
@@ -50,12 +50,12 @@ app.post('/post/:id',(req,res)=>{
 );
 
 
-app.put('put/:id',(req,res)=>{
+app.put('/post/:id',(req,res)=>{
     const postId = req.params.id;
     const { title, content , author} = req.body;
     const put = {
         data: {
-            tile: title ,
+            title: title ,
             content: content,
             author: author
           },
@@ -67,10 +67,10 @@ app.put('put/:id',(req,res)=>{
 });
 app.patch('/post/:id', (req, res)=> {
     const postId = req.params.id;
-    const { tile} =req.body
+    const { title} =req.body
     const patch = {
         data: {
-          tile: tile ,
+          title: title ,
         },
         message: "Post updated successfully"
       };
