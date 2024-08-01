@@ -23,7 +23,7 @@ const writeData = (data) => {
 // Get list of departments
 app.get('/departments', (req, res) => {
     const departments = readData();
-    res.json("nguyen van cong")
+    
     res.json(departments);
 });
 
@@ -74,6 +74,64 @@ app.delete('/departments/:id', (req, res) => {
     writeData(departments);
     res.status(204).send();
 });
+
+
+
+
+// Add  theem emlpoyess to a departments
+
+// app.post('/departments/:id/employees',(req,res)=>{
+//     let departments = readData();
+//     const department = departments.find(dpar =>dpar.id === parseInt(req.params.id));
+//     if(department){
+//         const newEmployee = {
+//             id:department.employees.length + 1,
+//             ...req.body
+//         }
+//         department.employees.push(newEmployee);
+//         writeData(departments);
+//         res.status(201).json(newEmployee);
+//     }else {
+//         res.status(404).send('Department not found');
+//     }
+   
+// })
+
+// // // update 1 employee
+// app.put('/departments/:departmentId/employees/:employeeId',(req,res)=>{
+//     let departments = readData();
+//     const department = departments.find(dpar =>dpar.id === parseInt(req.params.departmentId));
+//     if(department){
+//         const emlpoyessIndex = department.emlpoyess.findIndex(emId =>emId.id === parseInt(req.params.employeeId));
+//          if(emlpoyessIndex !== -1){
+//             const upDateEmployees = {
+//                 ...department.emlpoyess[emlpoyessIndex],
+//                 ...req.body
+//             }
+//             department.emlpoyess[emlpoyessIndex] = upDateEmployees;
+//             writeData(departments);
+//             res.json(upDateEmployees);
+//          }else{
+//             res.status(404).send('Employess not found');
+//          }
+//     }else{
+//         res.status(404).send('Department not found');
+//     }
+// });
+
+
+// // //delete 1 employees
+// app.delete('/departments/:departmentId/employees/:employeeId', (req, res) => {
+//     const departments = readData();
+//     const department = departments.find(d => d.id === parseInt(req.params.departmentId));
+//     if (department) {
+//         department.employees = department.employees.filter(emId => emId.id !== parseInt(req.params.employeeId));
+//         writeData(departments);
+//         res.status(204).send();
+//     } else {
+//         res.status(404).send('Department not found');
+//     }
+// });
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

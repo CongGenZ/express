@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "name": "Phong thiet ke",
+    "departmentId": 1,
+    "phone": "094898493",
+    "email": "fehjfuehfuehjfuienfheonf",
+    "salary": 1000
+  },
+  {
+    "id": 2,
+    "name": "Phong thiet ke 2",
+    "age": 21,
+    "departmentId": 1,
+    "phone": "094898493",
+    "email": "fehjfuehfuehjfuienfheonf",
+    "salary": 2000
+  }
+]
